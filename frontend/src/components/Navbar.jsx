@@ -46,7 +46,7 @@ export default function Navbar() {
             Projects
           </button>
           <a
-            href='/Shubham,pdf'
+            href='/Shubham.pdf'
             download
             className='hover:text-blue-400 transition cursor-pointer'
           >

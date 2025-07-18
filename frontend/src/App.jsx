@@ -16,17 +16,16 @@ function App() {
   }, []);
 
   return (
-    <div className='font-sans text-gray-800'>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <footer className='text-center p-4 text-sm text-gray-400'>
-        © 2025 Shubham Kumar
-      </footer>
-    </div>
+    <>
+      <div className='font-sans text-gray-800'>
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
+    </>
   );
 }
 
