@@ -3,25 +3,14 @@ import { useState, useEffect } from 'react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Smooth scroll handler
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsOpen(false); // close mobile menu on click
+      setIsOpen(false);
     }
   };
 
-  // CV Download Tracker
-  const handleDownload = () => {
-    fetch('https://your-backend-url/api/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type: 'download' }),
-    });
-  };
-
-  // Prevent scroll when menu is open (mobile)
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
   }, [isOpen]);
@@ -29,7 +18,6 @@ export default function Navbar() {
   return (
     <header className='bg-gray-950 text-white fixed top-0 left-0 w-full z-50 shadow-lg'>
       <div className='max-w-7xl mx-auto px-6 py-4 flex justify-between items-center'>
-        {/* Logo */}
         <div
           onClick={() => scrollToSection('hero')}
           className='text-xl font-bold tracking-wide cursor-pointer'
@@ -38,36 +26,35 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <nav className='hidden md:flex items-center gap-8 text-sm font-medium '>
+        <nav className='hidden md:flex items-center gap-8 text-sm font-medium'>
           <button
             onClick={() => scrollToSection('about')}
-            className='hover:text-blue-400 transition cursor-pointer'
+            className='hover:text-blue-400 transition'
           >
             About Me
           </button>
           <button
             onClick={() => scrollToSection('skills')}
-            className='hover:text-blue-400 transition cursor-pointer'
+            className='hover:text-blue-400 transition'
           >
             Skills
           </button>
           <button
             onClick={() => scrollToSection('projects')}
-            className='hover:text-blue-400 transition cursor-pointer'
+            className='hover:text-blue-400 transition'
           >
             Projects
           </button>
           <a
-            href='/cv.pdf'
+            href='/Shubham,pdf'
             download
-            onClick={handleDownload}
             className='hover:text-blue-400 transition cursor-pointer'
           >
             Download CV
           </a>
           <button
             onClick={() => scrollToSection('contact')}
-            className='hover:text-blue-400 transition cursor-pointer'
+            className='hover:text-blue-400 transition'
           >
             Get in Touch
           </button>
@@ -79,11 +66,10 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg
-            className='w-6 h-6 text-white cursor-pointer'
+            className='w-6 h-6 text-white'
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'
-            xmlns='http://www.w3.org/2000/svg'
           >
             {isOpen ? (
               <path
@@ -128,10 +114,7 @@ export default function Navbar() {
           <a
             href='/cv.pdf'
             download
-            onClick={() => {
-              handleDownload();
-              setIsOpen(false);
-            }}
+            onClick={() => setIsOpen(false)}
             className='block hover:text-blue-400'
           >
             Download CV

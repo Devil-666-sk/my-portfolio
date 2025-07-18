@@ -1,29 +1,32 @@
 // components/Contact.jsx
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const formRef = useRef();
   const [sent, setSent] = useState(false);
-
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('https://your-backend-url.com/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    });
-
-    if (res.ok) {
-      setForm({ name: '', email: '', message: '' });
-      setSent(true);
-      setTimeout(() => setSent(false), 5000);
-    } else {
-      alert('Error sending message. Please try again later.');
-    }
+    emailjs
+      .sendForm(
+        'service_a1mq1ra',
+        'template_yt7a207',
+        formRef.current,
+        'hfFEb2okfoNDD9xCH'
+      )
+      .then(
+        () => {
+          setSent(true);
+          formRef.current.reset();
+          setTimeout(() => setSent(false), 5000);
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert('Error sending message. Please try again.');
+        }
+      );
   };
 
   return (
@@ -38,31 +41,29 @@ export default function Contact() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className='max-w-xl mx-auto space-y-6'>
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className='max-w-xl mx-auto space-y-6'
+      >
         <input
           type='text'
-          name='name'
+          name='from_name'
           placeholder='Your Name'
           required
-          value={form.name}
-          onChange={handleChange}
           className='w-full px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
         />
         <input
           type='email'
-          name='email'
+          name='from_email'
           placeholder='Your Email'
           required
-          value={form.email}
-          onChange={handleChange}
           className='w-full px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
         />
         <textarea
           name='message'
           placeholder='Your Message'
           required
-          value={form.message}
-          onChange={handleChange}
           rows={6}
           className='w-full px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
         ></textarea>
