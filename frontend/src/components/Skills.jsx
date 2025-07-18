@@ -5,6 +5,7 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaFigma,
+  FaGithub,
 } from 'react-icons/fa';
 import {
   SiTailwindcss,
@@ -12,6 +13,11 @@ import {
   SiExpress,
   SiMui,
   SiJavascript,
+  SiVercel,
+  SiNetlify,
+  SiRender,
+  SiFirebase,
+  SiMaildotru,
 } from 'react-icons/si';
 
 export default function Skills() {
@@ -27,6 +33,12 @@ export default function Skills() {
     { name: 'Material UI', icon: <SiMui className='text-blue-400' /> },
     { name: 'Bootstrap', icon: <FaBootstrap className='text-purple-500' /> },
     { name: 'Figma', icon: <FaFigma className='text-pink-500' /> },
+    { name: 'GitHub', icon: <FaGithub className='text-white' /> },
+    { name: 'Vercel', icon: <SiVercel className='text-white' /> },
+    { name: 'Netlify', icon: <SiNetlify className='text-teal-300' /> },
+    { name: 'Render', icon: <SiRender className='text-indigo-400' /> },
+    { name: 'Firebase', icon: <SiFirebase className='text-orange-400' /> },
+    { name: 'EmailJS', icon: <SiMaildotru className='text-red-400' /> },
   ];
 
   return (

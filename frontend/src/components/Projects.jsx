@@ -3,21 +3,33 @@
 const projects = [
   {
     title: 'Audiophile Clone',
-    img: 'https://audiophile-html-tailwind-clone.netlify.app/og-image.jpg', // Replace with your real preview image
+    img: '/audiophile.png',
     live: 'https://audiophile-html-tailwind-clone.netlify.app/',
     stack: ['HTML', 'Tailwind CSS', 'JavaScript'],
   },
   {
     title: 'Shopsy Clone (React)',
-    img: 'https://shopsycloneinreactjs.netlify.app/preview.jpg', // Replace with your real preview image
+    img: '/shopsy.png',
     live: 'https://shopsycloneinreactjs.netlify.app/',
     stack: ['React', 'Tailwind', 'MUI'],
   },
   {
     title: 'Crypto Tracker',
-    img: 'https://your-crypto-preview-link.com/preview.jpg', // Replace with your image
+    img: 'https://your-crypto-preview-link.com/preview.jpg',
     live: 'https://crypto-eight-zeta.vercel.app/',
     stack: ['MERN', 'Tailwind', 'CoinGecko API'],
+  },
+  {
+    title: 'DigiBeez',
+    img: '/digibeez.png',
+    live: 'https://degibeez.vercel.app/',
+    stack: ['React', 'MUI'],
+  },
+  {
+    title: 'React-Stopwatch',
+    img: 'stopwatch.png',
+    live: 'https://stop-watch-in-js.vercel.app/',
+    stack: ['React', 'MUI'],
   },
 ];
 
