@@ -39,7 +39,7 @@ export default function Hero() {
           </p>
           <div className='flex flex-wrap gap-4 justify-center md:justify-start'>
             <a
-              href='/cv.pdf'
+              href='/Shubham.pdf'
               download
               onClick={handleDownload}
               className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-white font-medium transition'
