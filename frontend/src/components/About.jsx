@@ -24,7 +24,7 @@ export default function About() {
               <span className='text-white font-semibold'>Shubham Kumar</span>, a
               highly motivated and detail-oriented{' '}
               <span className='text-blue-400'>MERN Stack Developer</span> with
-              over 1 years of hands-on experience in designing, developing, and
+              over 2 years of hands-on experience in designing, developing, and
               deploying full-stack web applications.
             </p>
             <p>
@@ -53,7 +53,7 @@ export default function About() {
               <Briefcase size={32} className='text-blue-400 mt-1' />
               <div>
                 <h4 className='text-xl font-semibold'>
-                  1+ Years of Experience
+                  2+ Years of Experience
                 </h4>
                 <p className='text-gray-400'>
                   Building scalable full-stack web applications using the MERN

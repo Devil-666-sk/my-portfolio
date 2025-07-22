@@ -32,14 +32,14 @@ export default function Hero() {
             <span className='text-blue-400 font-medium'>
               MERN Stack Developer
             </span>{' '}
-            with 1 years of experience building full-stack web applications that
+            with 2 years of experience building full-stack web applications that
             are scalable, responsive, and user-friendly. I specialize in
             JavaScript, React, Node.js, Express, and MongoDB, and love crafting
             modern UIs and APIs that solve real-world problems.
           </p>
           <div className='flex flex-wrap gap-4 justify-center md:justify-start'>
             <a
-              href='/Shubham.pdf'
+              href='/ShubhamKumar.pdf'
               download
               onClick={handleDownload}
               className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-white font-medium transition'
