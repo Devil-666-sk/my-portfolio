@@ -32,7 +32,7 @@ export default function Hero() {
             <span className='text-blue-400 font-medium'>
               MERN Stack Developer
             </span>{' '}
-            with 2 years of experience building full-stack web applications that
+            with 1 years of experience building full-stack web applications that
             are scalable, responsive, and user-friendly. I specialize in
             JavaScript, React, Node.js, Express, and MongoDB, and love crafting
             modern UIs and APIs that solve real-world problems.
