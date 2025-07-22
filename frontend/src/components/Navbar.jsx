@@ -29,19 +29,19 @@ export default function Navbar() {
         <nav className='hidden md:flex items-center gap-8 text-sm font-medium'>
           <button
             onClick={() => scrollToSection('about')}
-            className='hover:text-blue-400 transition'
+            className='hover:text-blue-400 transition cursor-pointer'
           >
             About Me
           </button>
           <button
             onClick={() => scrollToSection('skills')}
-            className='hover:text-blue-400 transition'
+            className='hover:text-blue-400 transition cursor-pointer'
           >
             Skills
           </button>
           <button
             onClick={() => scrollToSection('projects')}
-            className='hover:text-blue-400 transition'
+            className='hover:text-blue-400 transition cursor-pointer'
           >
             Projects
           </button>
@@ -54,7 +54,7 @@ export default function Navbar() {
           </a>
           <button
             onClick={() => scrollToSection('contact')}
-            className='hover:text-blue-400 transition'
+            className='hover:text-blue-400 transition cursor-pointer'
           >
             Get in Touch
           </button>
@@ -95,19 +95,19 @@ export default function Navbar() {
         <nav className='md:hidden bg-gray-900 text-white px-6 py-4 space-y-4 text-sm'>
           <button
             onClick={() => scrollToSection('about')}
-            className='block w-full text-left hover:text-blue-400'
+            className='block w-full text-left hover:text-blue-400 cursor-pointer'
           >
             About Me
           </button>
           <button
             onClick={() => scrollToSection('skills')}
-            className='block w-full text-left hover:text-blue-400'
+            className='block w-full text-left hover:text-blue-400 cursor-pointer'
           >
             Skills
           </button>
           <button
             onClick={() => scrollToSection('projects')}
-            className='block w-full text-left hover:text-blue-400'
+            className='block w-full text-left hover:text-blue-400 cursor-pointer'
           >
             Projects
           </button>
@@ -115,13 +115,13 @@ export default function Navbar() {
             href='/cv.pdf'
             download
             onClick={() => setIsOpen(false)}
-            className='block hover:text-blue-400'
+            className='block hover:text-blue-400 cursor-pointer'
           >
             Download CV
           </a>
           <button
             onClick={() => scrollToSection('contact')}
-            className='block w-full text-left hover:text-blue-400'
+            className='block w-full text-left hover:text-blue-400 cursor-pointer'
           >
             Get in Touch
           </button>
